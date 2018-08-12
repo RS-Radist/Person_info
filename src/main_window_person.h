@@ -21,7 +21,7 @@ protected:
     QTableWidgetItem *newItem;
     QSqlDatabase db;
 public:
-    explicit MainWindow_Person(QWidget *parent = 0);
+    explicit MainWindow_Person(QWidget *parent = nullptr);
     ~MainWindow_Person();
 
 private slots:
