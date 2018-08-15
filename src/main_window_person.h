@@ -5,6 +5,15 @@
 #include <QPixmap>
 #include <QTableWidgetItem>
 #include <QSqlQueryModel>
+#include <QDebug>
+#include <QLabel>
+#include <QDesktopServices>
+#include <QFileDialog>
+#include <QPainter>
+#include <QtSql>
+#include <QSqlDatabase>
+#include <QSqlQuery>
+#include <QMessageBox>
 namespace Ui {
 class MainWindow_Person;
 }
@@ -12,16 +21,15 @@ class MainWindow_Person;
 class MainWindow_Person : public QMainWindow
 {
     Q_OBJECT
-private:
-    int sizeTable;
 protected:
+    enum {Num1=1,Num2=2,Num3=3,Num4=4,Num5=5};
     QSqlQueryModel *modal;
     QPixmap *pix;
-    int checkboxCountRow;
     QTableWidgetItem *newItem;
     QSqlDatabase db;
+    QString *strImg;
 public:
-    explicit MainWindow_Person(QWidget *parent = 0);
+    explicit MainWindow_Person(QWidget *parent = nullptr);
     ~MainWindow_Person();
 
 private slots:
