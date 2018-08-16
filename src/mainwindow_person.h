@@ -4,7 +4,6 @@
 #include <QMainWindow>
 #include <QPixmap>
 #include <QTableWidgetItem>
-#include <QSqlQueryModel>
 #include <QDebug>
 #include <QLabel>
 #include <QDesktopServices>
@@ -14,6 +13,7 @@
 #include <QSqlDatabase>
 #include <QSqlQuery>
 #include <QMessageBox>
+
 namespace Ui {
 class MainWindow_Person;
 }
@@ -37,6 +37,7 @@ private slots:
     void CloseWindow();
     void on_pushButton_2_clicked();
     void SlotSavePix(int,int);
+
 private:
     Ui::MainWindow_Person *ui;
 signals:
